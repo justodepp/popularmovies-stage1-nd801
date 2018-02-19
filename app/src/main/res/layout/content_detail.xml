@@ -6,7 +6,7 @@
     tools:showIn="@layout/activity_detail">
 
     <RelativeLayout
-        android:id="@+id/detailScrollViewContainer"
+        android:id="@+id/detailContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/detail_horizontal_margin"
@@ -16,8 +16,6 @@
             android:id="@+id/posterImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="@dimen/detail_generic_spacing"
             tools:src="@mipmap/ic_launcher" />
 
@@ -30,7 +28,7 @@
             android:layout_marginStart="@dimen/detail_generic_spacing"
             android:layout_toEndOf="@+id/posterImageView"
             android:layout_toRightOf="@+id/posterImageView"
-            android:text="2nd October, 1869"
+            android:text="2nd October, 1999"
             android:textSize="20sp" />
 
         <RatingBar
@@ -53,7 +51,7 @@
             android:layout_alignLeft="@+id/rating"
             android:layout_alignStart="@+id/rating"
             android:layout_below="@+id/rating"
-            android:text="7.6/10" />
+            tools:text="5.6/10" />
 
         <TextView
             android:id="@+id/overviewTextView"
@@ -63,7 +61,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="@dimen/detail_generic_spacing"
-            android:text="Lorem iasda sdakds akdsakd sdkads" />
+            tools:text="Some text to display" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

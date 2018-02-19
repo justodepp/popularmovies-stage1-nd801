@@ -7,8 +7,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+
+import org.w3c.dom.Text;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import it.deeper.popularmovies.model.Movie;
 import it.deeper.popularmovies.utils.Params;
@@ -27,7 +35,35 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void fillData() {
+        ImageView poster = findViewById(R.id.posterImageView);
+        loadBackdrop(poster, Params.IMAGE_PATH.concat(Params.IMAGE_SIZE[3])
+                .concat(mMovie.getPosterPath()));
 
+        TextView releaseDate = findViewById(R.id.releaseDate);
+        releaseDate.setText(reformatDate(mMovie.getReleaseDate()));
+
+        TextView rating = findViewById(R.id.ratingTextView);
+        rating.setText(mMovie.getRating());
+        //rating.setText((float) Math.round(Integer.valueOf(mMovie.getRating())*10d)/10d + "/10");
+
+        RatingBar ratingBar = findViewById(R.id.rating);
+        ratingBar.setRating(Float.valueOf(mMovie.getRating()) / 2f);
+
+        TextView overview = findViewById(R.id.overviewTextView);
+        overview.setText(mMovie.getOverview());
+    }
+
+    private String reformatDate(String releaseDate) {
+        SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-DD");
+        Date newDate = null;
+        try {
+            newDate = format.parse(releaseDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        format = new SimpleDateFormat("EEE, d MMM yyyy");
+        return format.format(newDate);
     }
 
     private void settingsToolbar() {
@@ -39,7 +75,8 @@ public class DetailActivity extends AppCompatActivity {
         collapsingToolbar.setTitle(" ");
 
         final ImageView backdrop = findViewById(R.id.backdrop);
-        loadBackdrop(backdrop);
+        loadBackdrop(backdrop, Params.IMAGE_PATH.concat(Params.IMAGE_SIZE[3])
+                .concat(mMovie.getBackdropPath()));
 
         AppBarLayout appBarLayout = findViewById(R.id.appbar);
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
@@ -65,9 +102,9 @@ public class DetailActivity extends AppCompatActivity {
         });
     }
 
-    private void loadBackdrop(ImageView backdrop) {
+    private void loadBackdrop(ImageView backdrop, String path) {
         Picasso.with(this)
-                .load(Params.IMAGE_PATH.concat(mMovie.getBackdropPath()))
+                .load(path)
                 .into(backdrop);
     }
 
