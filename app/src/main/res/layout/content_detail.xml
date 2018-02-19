@@ -31,6 +31,16 @@
             android:text="2nd October, 1999"
             android:textSize="20sp" />
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detail_generic_spacing"
+            android:layout_alignLeft="@+id/releaseDate"
+            android:layout_alignStart="@+id/releaseDate"
+            android:layout_below="@+id/releaseDate"
+            android:textSize="20sp" />
+
         <RatingBar
             android:id="@+id/rating"
             style="?android:attr/ratingBarStyleSmall"
@@ -38,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/releaseDate"
             android:layout_alignStart="@+id/releaseDate"
-            android:layout_below="@+id/releaseDate"
+            android:layout_below="@+id/title"
             android:layout_marginTop="@dimen/detail_generic_spacing"
             android:isIndicator="true"
             android:rating="5.0"

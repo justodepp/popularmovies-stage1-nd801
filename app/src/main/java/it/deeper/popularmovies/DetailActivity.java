@@ -12,8 +12,6 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -42,9 +40,11 @@ public class DetailActivity extends AppCompatActivity {
         TextView releaseDate = findViewById(R.id.releaseDate);
         releaseDate.setText(reformatDate(mMovie.getReleaseDate()));
 
+        TextView title = findViewById(R.id.title);
+        title.setText(mMovie.getTitle());
+
         TextView rating = findViewById(R.id.ratingTextView);
-        rating.setText(mMovie.getRating());
-        //rating.setText((float) Math.round(Integer.valueOf(mMovie.getRating())*10d)/10d + "/10");
+        rating.setText(mMovie.getRating()+ "/10");
 
         RatingBar ratingBar = findViewById(R.id.rating);
         ratingBar.setRating(Float.valueOf(mMovie.getRating()) / 2f);
