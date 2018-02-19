@@ -14,6 +14,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -50,13 +51,16 @@ public class MainActivity extends AppCompatActivity implements
     private ProgressBar mLoadingIndicator;
 
     private RecyclerView mRecyclerView;
+    private MovieList movieList;
     private MovieAdapter movieAdapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         queryMovie = "popular";
         pageNum = 1;
@@ -228,7 +232,9 @@ public class MainActivity extends AppCompatActivity implements
         if (movieList != null) {
             showJsonDataView();
 
-            movieAdapter = new MovieAdapter(this, movieList.getResult(), this);
+            this.movieList = movieList;
+
+            movieAdapter = new MovieAdapter(this, this.movieList.getResult(), this);
             mRecyclerView.setAdapter(movieAdapter);
 
         } else {
@@ -250,7 +256,9 @@ public class MainActivity extends AppCompatActivity implements
         }
 
         Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra("position", position);
+
+        DetailActivity.setMovieDetails(this.movieList.getResult().get(position));
+
         startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
 

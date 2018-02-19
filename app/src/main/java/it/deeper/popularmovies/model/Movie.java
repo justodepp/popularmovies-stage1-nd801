@@ -6,7 +6,26 @@ public class Movie {
     private String rating;
     private String title;
     private String posterPath;
+    private String original_title;
     private String overview;
+    private String backdropPath;
+
+    public String getOriginalTitle() {
+        return original_title;
+    }
+
+    public void setOriginalTitle(String original_title) {
+        this.original_title = original_title;
+    }
+
+    public String getBackdropPath() {
+        return backdropPath;
+    }
+
+    public void setBackdropPath(String backdropPath) {
+        this.backdropPath = backdropPath;
+    }
+
     private String releaseDate;
 
     public int getId() {
