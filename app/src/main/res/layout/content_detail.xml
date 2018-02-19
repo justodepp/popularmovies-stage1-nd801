@@ -28,8 +28,8 @@
             android:layout_marginStart="@dimen/detail_generic_spacing"
             android:layout_toEndOf="@+id/posterImageView"
             android:layout_toRightOf="@+id/posterImageView"
-            android:text="2nd October, 1999"
-            android:textSize="20sp" />
+            tools:text="2nd October, 1999"
+            android:textSize="@dimen/text_size" />
 
         <TextView
             android:id="@+id/title"
@@ -39,7 +39,7 @@
             android:layout_alignLeft="@+id/releaseDate"
             android:layout_alignStart="@+id/releaseDate"
             android:layout_below="@+id/releaseDate"
-            android:textSize="20sp" />
+            android:textSize="@dimen/text_size" />
 
         <RatingBar
             android:id="@+id/rating"
@@ -68,8 +68,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/posterImageView"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="@dimen/detail_horizontal_margin"
+            android:layout_marginRight="@dimen/detail_horizontal_margin"
             android:layout_marginTop="@dimen/detail_generic_spacing"
             tools:text="Some text to display" />
 

@@ -93,7 +93,6 @@ public class DetailActivity extends AppCompatActivity {
                     backdrop.setAlpha(.7f);
                     isShow = true;
                 } else if (isShow) {
-                    // There should a space between double quote otherwise it won't work
                     collapsingToolbar.setTitle(" ");
                     backdrop.setAlpha(1f);
                     isShow = false;
