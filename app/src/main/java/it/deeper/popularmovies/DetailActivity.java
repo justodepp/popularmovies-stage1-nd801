@@ -1,4 +1,4 @@
-package it.salini.popularmovies;
+package it.deeper.popularmovies;
 
 import android.support.v7.app.AppCompatActivity;
 

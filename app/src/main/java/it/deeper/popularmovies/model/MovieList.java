@@ -1,4 +1,4 @@
-package it.salini.popularmovies.model;
+package it.deeper.popularmovies.model;
 
 import java.util.ArrayList;
 

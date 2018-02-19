@@ -1,4 +1,4 @@
-package it.salini.popularmovies;
+package it.deeper.popularmovies;
 
 import org.junit.Test;
 

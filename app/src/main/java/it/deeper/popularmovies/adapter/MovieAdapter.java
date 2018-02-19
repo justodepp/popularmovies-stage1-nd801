@@ -1,4 +1,4 @@
-package it.salini.popularmovies.adapter;
+package it.deeper.popularmovies.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,9 +11,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-import it.salini.popularmovies.R;
-import it.salini.popularmovies.model.Movie;
-import it.salini.popularmovies.utils.Params;
+import it.deeper.popularmovies.R;
+import it.deeper.popularmovies.model.Movie;
+import it.deeper.popularmovies.utils.Params;
 
 
 /**

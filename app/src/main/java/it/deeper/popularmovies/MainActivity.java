@@ -1,4 +1,4 @@
-package it.salini.popularmovies;
+package it.deeper.popularmovies;
 
 import android.annotation.SuppressLint;
 import android.app.ActivityOptions;
@@ -24,11 +24,11 @@ import android.widget.TextView;
 
 import java.net.URL;
 
-import it.salini.popularmovies.adapter.MovieAdapter;
-import it.salini.popularmovies.model.MovieList;
-import it.salini.popularmovies.utils.JsonUtils;
-import it.salini.popularmovies.utils.NetworkUtils;
-import it.salini.popularmovies.utils.Params;
+import it.deeper.popularmovies.adapter.MovieAdapter;
+import it.deeper.popularmovies.model.MovieList;
+import it.deeper.popularmovies.utils.JsonUtils;
+import it.deeper.popularmovies.utils.NetworkUtils;
+import it.deeper.popularmovies.utils.Params;
 
 public class MainActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<MovieList>, MovieAdapter.MovieClickListener,

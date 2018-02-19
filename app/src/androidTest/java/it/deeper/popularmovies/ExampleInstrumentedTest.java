@@ -1,4 +1,4 @@
-package it.salini.popularmovies;
+package it.deeper.popularmovies;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

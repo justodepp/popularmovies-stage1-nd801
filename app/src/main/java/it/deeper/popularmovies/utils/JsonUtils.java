@@ -1,4 +1,4 @@
-package it.salini.popularmovies.utils;
+package it.deeper.popularmovies.utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -6,8 +6,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import it.salini.popularmovies.model.Movie;
-import it.salini.popularmovies.model.MovieList;
+import it.deeper.popularmovies.model.Movie;
+import it.deeper.popularmovies.model.MovieList;
 
 public class JsonUtils {
 
