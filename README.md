@@ -7,6 +7,8 @@
 #### Credits
 icon launcer provided by [Pixel Perfect](https://www.flaticon.com/authors/pixel-perfect)
 
+<img src="https://raw.githubusercontent.com/justodepp/popularmovies-stage1-nd801/master/art/Screenshot_1528461601.png" width="250"> <img src="https://raw.githubusercontent.com/justodepp/popularmovies-stage1-nd801/master/art/Screenshot_1528461617.png" width="250"> <img src="https://raw.githubusercontent.com/justodepp/popularmovies-stage1-nd801/master/art/Screenshot_1528461654.png" width="250">
+
 License
 -------------
 
