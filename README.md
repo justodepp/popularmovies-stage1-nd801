@@ -10,7 +10,7 @@ icon launcer provided by [Pixel Perfect](https://www.flaticon.com/authors/pixel-
 License
 -------------
 
-Copyright 2014 The Android Open Source Project, Inc.
+Copyright 2018 Gianni Andrea Cavalli
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
 license agreements.  See the NOTICE file distributed with this work for
