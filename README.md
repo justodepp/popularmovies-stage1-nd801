@@ -1,4 +1,5 @@
 # Popular Movies
+###### Project of [Udacity Android Developer Nanodegree](https://classroom.udacity.com/nanodegrees/nd801/syllabus/core-curriculum)
 ###### stage 1
 ### Tasks Executed
 - Build a UI layout for multiple Activities.
